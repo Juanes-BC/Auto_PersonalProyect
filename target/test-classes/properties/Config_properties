@@ -1,0 +1,3 @@
+//configuracion apertura de chrome
+url=https://www.avianca.com/es
+driver=./src/test/resources/driver/chromedriver.exe
