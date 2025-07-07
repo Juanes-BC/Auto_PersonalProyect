@@ -16,7 +16,9 @@ public class Launch_Avianca {
 	
   @BeforeClass
   public void beforeClass() throws FileNotFoundException {
-	  controller.aperturaChromeWeb();
+	  if (driver == null) {
+		  controller.aperturaChromeWeb();
+	}
   }
 
   @AfterClass
