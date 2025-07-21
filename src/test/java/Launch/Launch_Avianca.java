@@ -5,6 +5,7 @@ import Controller.Controller_Avianca;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import java.io.FileNotFoundException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 
@@ -20,12 +21,14 @@ public class Launch_Avianca {
 		  controller.aperturaChromeWeb();
 	}
   }
+  
+  @Test
+  public void buscarVuelos() {
+	  controller.InteractuarMenu();
+  }
 
   @AfterClass
   public void afterClass() {
-  }
-
-  @Test
-  public void f() {
+	  controller.InteractuarMenu();
   }
 }

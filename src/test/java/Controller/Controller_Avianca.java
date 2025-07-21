@@ -3,13 +3,16 @@ package Controller;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import Validations.InfPageAvianca;
+import Page.Page_Avianca;
+import Validations.Lector_Excel;
 import Validations.LectorProperties;
 
 public class Controller_Avianca {
 
-	InfPageAvianca info;
+	Lector_Excel info;
 	WebDriver driver;
+	Page_Avianca page;
+	
 		
 	public void aperturaChromeWeb() {
 		System.setProperty("webdriver.chrome.driver", LectorProperties.get("driver"));
@@ -17,4 +20,10 @@ public class Controller_Avianca {
 		driver.manage().window().maximize();
 		driver.get(LectorProperties.get("url"));
 	}
+	
+	public void InteractuarMenu () {
+		Page_Avianca page = new Page_Avianca();
+		page.inicializarLocators(driver);
+	}
+
 }
